@@ -42,7 +42,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="cb.bmp" />
 		<Unit filename="cokus3.cpp" />
 		<Unit filename="include/RandUtils.h" />
 		<Unit filename="include/TParticle.h" />
