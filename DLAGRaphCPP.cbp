@@ -19,6 +19,7 @@
 					<Add library="sfml-graphics" />
 					<Add library="sfml-window" />
 					<Add library="sfml-system" />
+					<Add directory="external" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -47,11 +48,7 @@
 		<Unit filename="include/TParticle.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/RandUtils.cpp" />
-		<Unit filename="src/TLattice.cpp" />
 		<Unit filename="src/TParticle.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
