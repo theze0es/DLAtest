@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1609003390 source:/home/fcavalleri/src/DLAGRaphCPP/src/TParticle.cpp
+	"TParticle.h"
+
+1609001071 /home/fcavalleri/src/DLAGRaphCPP/include/TParticle.h
+	<math.h>
+	"RandUtils.h"
+
+1609001071 source:/home/fcavalleri/src/DLAGRaphCPP/main.cpp
+	<SFML/Graphics.hpp>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<unistd.h>
+	"TParticle.h"
+	"RandUtils.h"
+	<vector>
+
+1607975524 source:/home/fcavalleri/src/DLAGRaphCPP/src/Lattice.cpp
+	"Lattice.h"
+
+1607975523 /home/fcavalleri/src/DLAGRaphCPP/include/Lattice.h
+
+1608984422 source:/home/fcavalleri/src/DLAGRaphCPP/src/TLattice.cpp
+
+1609004162 /home/fcavalleri/src/DLAGRaphCPP/include/RandUtils.h
+	<math.h>
+
+1609003583 source:/home/fcavalleri/src/DLAGRaphCPP/cokus3.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1609003562 source:/home/fcavalleri/src/DLAGRaphCPP/src/RandUtils.cpp
+	"RandUtils.h"
+
