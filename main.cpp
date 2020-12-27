@@ -11,14 +11,14 @@
 
 //definisco una costante esterna (non variabile) cioè i parametri
 #define N 500  // numero particelle
-#define L 500  // dimensioni spazio
+#define LEN 500  // dimensioni spazio
 #define T 1000000 // tempo di simulazione
 
 //dichiaro funzioni
 
 int main(){
 
-sf::RenderWindow app(sf::VideoMode(L,L), "Simulazione Diffusione Monomeri");
+sf::RenderWindow app(sf::VideoMode(LEN,LEN), "Simulazione Diffusione Monomeri");
 sf::Event event;
 
 //inizializzo un vettore di elementi di tipo "Particella"
@@ -28,9 +28,11 @@ std::vector<TParticle> AllPart;
 seedMT2();
 
 //inizializzo il vettore N classi "Particle", x e y random e mob=false
+TParticle::L=LEN;
+
 for (int i=0; i<N; i++)
     {
-    TParticle x(L);
+    TParticle x;
     AllPart.push_back(x);
     }
 

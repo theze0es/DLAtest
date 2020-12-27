@@ -1,31 +1,8 @@
 #include "TParticle.h"
 
-TParticle::TParticle(int Len)
+TParticle::TParticle()
 {
-
-L=Len;
-xc=randM(L);                 //posiziono il centro random
-if (xc%2==0){                //ma sulla griglia triangolare: la somma degli indici deve essere pari
-        yc=(randM(L)*2)%L;  //se x pari, y pari
-    }
-    else{
-        yc=(randM(L)*2+1)%L; //se x dispari, y dispari
-    }
-
-//creo i siti d e s con un movimento fittizio attorno a xc, yc
-int dx[6], dy[6];
-
-dx[0]=-2; dx[1]=2; dx[2]=1; dx[3]=-1; dx[4]=1; dx[5]=-1;
-dy[0]=0; dy[1]=0; dy[2]=1; dy[3]=1; dy[4]=-1; dy[5]=-1;
-
-int tr=randM(6);
-
-xs=(xc+dx[tr]+L)%L; //il sito d lo metto in direzione dello spostamento fittizio
-ys=(yc+dy[tr]+L)%L;
-
-xd=(xc-dx[tr]+L)%L; //il sito s nella direzione opposta
-yd=(yc-dy[tr]+L)%L;
-
+RandomizePosition();
 mob=true;
 }
 
@@ -97,4 +74,26 @@ int sx, sy; //valori utili per effettuare la rotazione
         }
 
 }
+
+void TParticle::RandomizePosition()
+{
+xc=randM(L);                 //posiziono il centro random
+if (xc%2==0){                //ma sulla griglia triangolare: la somma degli indici deve essere pari
+        yc=(randM(L)*2)%L;  //se x pari, y pari
+    }
+    else{
+        yc=(randM(L)*2+1)%L; //se x dispari, y dispari
+    }
+
+//creo i siti d e s con un movimento fittizio attorno a xc, yc
+
+int tr=randM(6);
+
+xs=(xc+dx[tr]+L)%L; //il sito d lo metto in direzione dello spostamento fittizio
+ys=(yc+dy[tr]+L)%L;
+
+xd=(xc-dx[tr]+L)%L; //il sito s nella direzione opposta
+yd=(yc-dy[tr]+L)%L;
+}
+
 
